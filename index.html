@@ -12,7 +12,6 @@
 </head>
 
 <style>
-
     .main-container {
         background-image: url('static/image/background2.jpg');
         background-size: cover;
@@ -56,6 +55,45 @@
     .hr-tag {
         border: 5px solid var(--espresso);
         margin: 0;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+
+    .card-img {
+        width: 75px;
+        height: 75px;
+        border-radius: 10%;
+    }
+
+    .cards-container .card:nth-child(1):hover {
+        p {
+            transform: translateY(-40px);
+            transition: transform 0.3s ease-in;
+        }
+
+        .card-text,
+        .card-img {
+            visibility: visible;
+            transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+        }
+    }
+
+    .cards-container .card:nth-child(1) {
+        p {
+            transition: transform 0.3s ease-out;
+        }
+
+        .card-text,
+        .card-img {
+            visibility: hidden;
+            transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+        }
     }
 </style>
 
@@ -103,12 +141,18 @@
     <section class="cards-container">
         <div class="card">
             <p>Chocolate Chip</p>
+            <p class="card-text">Text</p>
+            <img class="card-img" src="static/image/pok3.jpg" alt="">
         </div>
         <div class="card">
             <p>Oatmeal Raisin</p>
+            <p class="card-text">Text</p>
+            <img class="card-img" src="static/image/pok2.jpg" alt="">
         </div>
         <div class="card">
             <p>Peanut Butter</p>
+            <p class="card-text">Text</p>
+            <img class="card-img" src="static/image/pok1.jpg" alt="">
         </div>
     </section>
 
